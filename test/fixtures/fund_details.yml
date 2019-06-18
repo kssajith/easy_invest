@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fund_id: 1
+  nav: 1.5
+  date: 2019-06-16
+
+two:
+  fund_id: 1
+  nav: 1.5
+  date: 2019-06-16
