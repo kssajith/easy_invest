@@ -1,6 +1,6 @@
 <%= form_for investment, url: {action: "create"} do |f| %>
-  <%= f.label :amount %>: <%= f.text_field :amount %>
-  <%= f.label :date_of_investing %>: <%= f.date_field("date_of_investing", min: Date.parse('01-Apr-2015'), placeholder: "dd/mm/yyyy") %>
-  <%= f.label :fund_id, "Scheme Name" %>: <%= f.collection_select(:fund_id, Fund.all, :id, :scheme_name, include_blank: true ) %>
-  <%= f.submit "Create" %>
+  <%= f.label :amount %> <%= f.text_field :amount %>
+  <%= f.label :date_of_investing %> <%= f.date_field("date_of_investing", min: Date.parse('01-Apr-2015'), placeholder: "dd/mm/yyyy") %>
+  <%= f.label :fund_id, "Scheme Name" %> <%= f.collection_select(:fund_id, Fund.all, :id, :scheme_name, include_blank: true ) %>
+  <%= f.submit "Create", class: 'submit_button' %>
 <% end %>

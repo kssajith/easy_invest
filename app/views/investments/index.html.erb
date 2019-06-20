@@ -1,29 +1,31 @@
-<div>
-  <h3>Add new investment</h3>
-  <div class="investment_form">
-    <%= render partial: 'form', locals: { investment: @new_investment } %>
+<div class="container">
+  <div class="add_investment">
+    <h3>Add new investment</h3>
+    <div class="investment_form">
+      <%= render partial: 'form', locals: { investment: @new_investment } %>
+    </div>
   </div>
-</div>
 
-<div class="investment_details">
-  <h3>Investment Details</h3>
-
-  <p>Total return: <%= Investment.total_return(@investments) %></p>
-  <table border=1px>
-    <tr>
-      <th><b>Fund</b></th>
-      <th><b>Date of Investment</b></th>
-      <th><b>Amount</b></th>
-      <th><b>Current Value</b></th>
-
-      <% @investments.each do |investment| %>
+  <div class="investment_details">
+    <h3>Investment Details
+    <p>Total return: <%= Investment.total_return(@investments) %></p>
+    </h3>
+    <table>
       <tr>
-      <td> <%= investment.fund.scheme_name %> </td>
-      <td> <%= investment.date_of_investing %> </td>
-      <td> <%= investment.amount.round(2) %> </td>
-      <td> <%= current_val(investment) %> </td>
+        <th><b>Fund</b></th>
+        <th><b>Date of Investment</b></th>
+        <th><b>Amount</b></th>
+        <th><b>Current Value</b></th>
+
+        <% @investments.each do |investment| %>
+        <tr>
+        <td> <%= investment.fund.scheme_name %> </td>
+        <td> <%= investment.date_of_investing.strftime('%d/%b/%Y') %> </td>
+        <td> <%= investment.amount.round(2) %> </td>
+        <td> <%= current_val(investment) %> </td>
+        </tr>
+        <% end %>
       </tr>
-      <% end %>
-    </tr>
-  </table>
+    </table>
+  </div>
 </div>

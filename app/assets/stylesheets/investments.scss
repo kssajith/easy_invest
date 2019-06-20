@@ -1,3 +1,85 @@
 // Place all the styles related to the investments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  min-width: 1200px;
+}
+
+.add_investment {
+  float: left;
+  width: 35%;
+}
+
+.investment_details {
+  float: right;
+  width: 65%;
+  border-left: solid 1px #dadada;
+  min-height: 100vh;
+}
+
+h3 {
+  padding: 20px 30px;
+  margin: 0;
+  border-bottom: 1px solid #dadada;
+  p {
+    float: right;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+.new_investment {
+  padding: 5px 25px 40px 60px;
+
+  label {
+    display: block;
+    color: #848484;
+    margin-top: 15px;
+    margin-bottom: 6px;
+  }
+
+  input,
+  select {
+    display: block;
+    width: 300px;
+    height: 35px;
+    border-radius: 3px;
+    border: 1px solid #dadada;
+  }
+
+  .submit_button {
+    color: #ffffff;
+    background-color: #353535;
+    width: 100px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-bottom: 1px solid #dadada;
+  width: 100%;
+  td,
+  th {
+    padding: 6px 10px;
+    + td,
+    + th {
+      border-left: 1px solid #dadada;
+    }
+  }
+
+  th {
+    border-bottom: 1px solid #dadada;
+  }
+}

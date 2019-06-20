@@ -9,6 +9,7 @@ class Investment < ApplicationRecord
   end
 
   def current_value
+
     nav_on_investing = FundDetail.get_nav(self.fund_id, self.date_of_investing)
     latest_nav = FundDetail.latest_nav(self.fund_id)
     return nil unless (nav_on_investing && latest_nav)
