@@ -22,8 +22,8 @@ default: &default
 development:
   <<: *default
   database: easy_invest_development
-  username: sajith
-  password: S@jith123
+  username: <your username here>
+  password: <your password>
 
 test:
   <<: *default

@@ -61,9 +61,12 @@ h3 {
   .submit_button {
     color: #ffffff;
     background-color: #353535;
-    width: 100px;
+    width: 120px;
     font-size: 16px;
     margin-top: 15px;
+    height: 45px;
+    text-transform: uppercase;
+    border-radius: 5px;
   }
 }
 
@@ -78,6 +81,9 @@ table {
     + th {
       border-left: 1px solid #dadada;
     }
+  }
+  td {
+    font-size: 14px;
   }
 
   th {
