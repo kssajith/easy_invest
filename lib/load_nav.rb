@@ -6,11 +6,18 @@ class LoadNav
     @scheme_name_id_map = Fund.scheme_name_id_map
   end
 
-  def load_axis_bank_data
+  def update_axis_bank_data
+    last_date = FundDetail.order(:date).last.try(:date)
+    from_date = last_date.try(:strftime, "%d-%b-%Y") || '01-Apr-2015'
+    logger.info "Starting to update data from #{from_date} onwards"
+    load_axis_bank_data(from_date)
+  end
+
+  def load_axis_bank_data(from_date = '01-Apr-2015')
     logger.info "Start updating NAV values"
 
     begin
-      data = fetch_data(axis_bank_url)
+      data = fetch_data(axis_bank_url(from_date))
     rescue Exception => e
       p "Data fetching failed with exception: #{e.class} :: #{e.message}"
       return
@@ -35,10 +42,10 @@ class LoadNav
     logger.info "NAV updaing completed!"
   end
 
-  def axis_bank_url
-    base_url = "http://portal.amfiindia.com/DownloadNAVHistoryReport_Po.aspx?mf=53&tp=1&frmdt=01-Apr-2015&todt=%{todt}"
+  def axis_bank_url(from_date = '01-Apr-2015')
+    base_url = "http://portal.amfiindia.com/DownloadNAVHistoryReport_Po.aspx?mf=53&tp=1&frmdt=%{frmdt}&todt=%{todt}"
     todt = Time.now.strftime('%d-%b-%Y')
-    url = base_url % { todt: todt }
+    url = base_url % { todt: todt, frmdt: from_date }
     url
   end
 

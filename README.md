@@ -21,12 +21,13 @@ Run `rake db:setup` to do the initial setup
 Features to Implement:
 
 - Date picker
-- Validation to the date field
-- validation at server side
+- Validation for scheme_name - DONE (at server side, ajax failed)
+- validation at server side - DONE
 - Searchable input for scheme selection
-- style changes - DONE
+- Style changes - DONE
 - xirr calculation
-- deployment to heroku
-- rspec
-- documentation
-- error message for invaid output
+- Deployment to heroku
+- Rspec
+- Documentation - In progress
+- Error message for invaid output - DONE
+- Flash messages - DONE
