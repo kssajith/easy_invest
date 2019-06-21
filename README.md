@@ -1,27 +1,22 @@
-# README
+# EASY INVEST - CHECK YOUR RETURNS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails app that calculate the return of the investmet made on a day in past and calculates the return
+NAV values are fetched and stored in the database.
 
-Things you may want to cover:
+If NAV of a particular date is not available, then the NAV of latest previous date is considered for the calculations
 
-- Ruby version
+### Initial Setup
 
-- System dependencies
+- Install ruby version : ruby-2.5.3
+- Clone and run `bundle install` to install the depenedencies
 
-- Configuration
+#### Database creation
 
-- Database creation
+Postgresql is used as the databse.
 
-- Database initialization
+Rename config/database.yml.example to config/database.yml
 
-- How to run the test suite
-
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...
+Run `rake db:setup` to do the initial setup
 
 Features to Implement:
 
