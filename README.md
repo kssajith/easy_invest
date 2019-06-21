@@ -25,13 +25,13 @@ Things you may want to cover:
 
 Features to Implement:
 
-Date picker
-Validation to the date field
-validation at server side
-Searchable input for scheme selection
-style changes
-xirr calculation
-deployment to heroku
-rspec
-documentation
-error message for invaid output
+- Date picker
+- Validation to the date field
+- validation at server side
+- Searchable input for scheme selection
+- style changes - DONE
+- xirr calculation
+- deployment to heroku
+- rspec
+- documentation
+- error message for invaid output

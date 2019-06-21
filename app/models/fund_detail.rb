@@ -1,4 +1,6 @@
 class FundDetail < ApplicationRecord
+  belongs_to :fund
+
   class << self
     def get_nav(fund_id, date)
       self.where(fund_id: fund_id)

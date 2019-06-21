@@ -30,6 +30,7 @@ h3 {
   padding: 20px 30px;
   margin: 0;
   border-bottom: 1px solid #dadada;
+  border-top: 1px solid #dadada;
   p {
     float: right;
     font-size: 16px;
@@ -81,5 +82,29 @@ table {
 
   th {
     border-bottom: 1px solid #dadada;
+  }
+}
+
+.notifications {
+  // position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.alert {
+  display: inline-block;
+  color: white;
+  padding: 3px 10px;
+  margin: 6px auto;
+  font-size: 14px;
+  border-radius: 3px;
+  height: 27px;
+  &-notice {
+    background-color: #65ac7c80;
+  }
+  &-error {
+    background-color: #771f1fcb;
   }
 }

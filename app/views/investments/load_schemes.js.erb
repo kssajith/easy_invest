@@ -1,0 +1,5 @@
+$('#fund_id_select').empty();
+
+<% @funds.each do |fund|%>
+  $('#fund_id_select').append($('<option value="<%= fund.id %>"><%= fund.scheme_name %></option>'))
+<% end %>
