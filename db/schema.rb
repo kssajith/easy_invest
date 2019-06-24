@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 2019_06_18_123430) do
     t.integer "fund_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "nav_on_investing"
   end
 
 end

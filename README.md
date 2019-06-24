@@ -46,10 +46,10 @@ Features to Implement:
 - validation at server side - DONE
 - Searchable input for scheme selection
 - Style changes - DONE
-- xirr calculation - Check gem and install
+- xirr calculation - Not working
 - Deployment to heroku - DONE
-- Rspec
-- Documentation - In progress
+- Rspec - DONE
+- Documentation - DONE
 - Error message for invaid output - DONE
 - Flash messages - DONE
 - Validations on input fields, to prevent negative and junk values - DONE at server side
