@@ -1,5 +1,6 @@
 <%= form_for investment, url: {action: "create"} do |f| %>
-  <%= f.label :amount %> <%= f.text_field :amount, { required: true } %>
+  <%= f.label :amount %>
+  <%= f.text_field :amount, { required: true } %>
   <%= f.label :date_of_investing %>
   <%= f.date_field("date_of_investing", min: Date.parse('01-Apr-2015'), placeholder: "dd/mm/yyyy") %>
   <%= f.label :fund_id, "Scheme Name" %>

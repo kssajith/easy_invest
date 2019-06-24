@@ -37,7 +37,7 @@ If NAV of a particular date is not available, then the NAV of latest previous da
 
 - Change configurations in `config/database.yml`
 
-- Run `rake db:setup` to do the initial setup
+- Run `rake db:setup` to do the initial setup and to load the navs
 
 Features to Implement:
 
@@ -47,9 +47,9 @@ Features to Implement:
 - Searchable input for scheme selection
 - Style changes - DONE
 - xirr calculation - Check gem and install
-- Deployment to heroku
+- Deployment to heroku - DONE
 - Rspec
 - Documentation - In progress
 - Error message for invaid output - DONE
 - Flash messages - DONE
-- Validations on input fields, to prevent negative and junk values
+- Validations on input fields, to prevent negative and junk values - DONE at server side

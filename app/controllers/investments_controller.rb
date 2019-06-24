@@ -12,7 +12,7 @@ class InvestmentsController < ApplicationController
 
   def create
     unless valid_params?
-      flash[:error] = "Some parameters are empty!"
+      flash[:error] = "Invalid inputs !"
       redirect_to investments_path and return
     end
 
@@ -42,6 +42,7 @@ class InvestmentsController < ApplicationController
   end
 
   def valid_params?
-    !investment_params.values.map(&:blank?).include?(true)
+    !investment_params.values.map(&:blank?).include?(true) &&
+    investment_params[:amount].to_s.match(/^[^0]\d*(\.\d\d?)?$/).present?
   end
 end
